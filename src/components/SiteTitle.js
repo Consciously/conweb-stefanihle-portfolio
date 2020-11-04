@@ -32,18 +32,19 @@ export const SiteTitle = () => {
 			`;
 
 			const RotateStyledSpan = styled.span`
-			  border: 3px solid #F3F3F3;
-				color: #F3F3F3;
-				padding: 5px;
-				margin-right: 18px;
+				border: 3px solid #f3f3f3;
+				color: #f3f3f3;
+				padding: 5px 0;
+				margin-right: 10px;
 				box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 				display: inline-block;
-				width: clamp(19px, 4.5vw, 44px);
+				width: clamp(25px, 4.5vw, 44px);
 				text-align: center;
 				border-radius: 5px;
-				font-size: clamp(1rem, 2.5vw, 40px);
-				animation: ${RandomRotateAnimation} 4s ease-in-out 0.5s infinite alternate
-					forwards;
+				font-size: clamp(0.5rem, 2.5vw, 40px);
+				font-weight: 700;
+				animation: ${RandomRotateAnimation} 4s ease-in-out 0.5s infinite
+					alternate forwards;
 			`;
 
 			if (name === ' ') {
