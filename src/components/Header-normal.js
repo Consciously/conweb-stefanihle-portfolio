@@ -5,8 +5,14 @@ import { SiteTitle } from './SiteTitle';
 
 export const HeaderNormal = () => {
 	return (
-		<header className='main-header'>
-			<Navbar collapseOnSelect expand='md' bg='transparent' variant='light' sticky='top'>
+		<header className='main-header bg-primary pb-5'>
+			<Navbar
+				collapseOnSelect
+				expand='md'
+				bg='transparent'
+				variant='dark'
+				sticky='top'
+			>
 				<Navbar.Toggle aria-controls='basic-navbar-nav' className='ml-auto' />
 				<Navbar.Collapse id='basic-navbar-nav'>
 					<Nav className='ml-auto'>
@@ -27,10 +33,9 @@ export const HeaderNormal = () => {
 			</Navbar>
 			<Container>
 				<Row className='justify-content-center'>
-					<div className="headline">
+					<div className='headline normal mt-5'>
 						<SiteTitle />
 					</div>
-					
 				</Row>
 			</Container>
 		</header>

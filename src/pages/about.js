@@ -7,9 +7,9 @@ export default function AboutPage({ data }) {
 	const { myImg } = data;
 
 	return (
-		<main className='container'>
+		<main className='container py-5'>
 			<Row className='flex-column'>
-				<h2 className='text-center'>About me</h2>
+				<h2 className='text-center mb-5'>About me</h2>
 				<Row>
 					<Col lg={2} md={3}>
 						<Card>

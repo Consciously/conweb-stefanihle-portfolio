@@ -5,7 +5,7 @@ import formatMoney from '../utils/FormatMoney';
 export default function ServicePage() {
 	const [key, setKey] = useState('oneShot');
 	return (
-		<main className='container'>
+		<main className='container py-5'>
 			<Row>
 				<Col>
 					<Tabs

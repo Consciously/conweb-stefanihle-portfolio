@@ -14,33 +14,16 @@ $theme-colors: (
   "light": $veryLightColor,
 );
 
+body {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
 .main-header {
   position: relative;
 
   .headline {
     position: relative;
     z-index: 3;
-
-    & span {
-  
-    border: 1px solid #1C2C30;
-  padding: 5px;
-  margin-right: 18px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  display: inline-block;
-  width: clamp(19px, 4.5vw,44px);
-  text-align: center;
-  border-radius: 5px;
-  font-size: clamp(1rem, 2.5vw, 40px);
-
-  // @media (max-width: 626px) {
-  //   width: 40px;
-  // }
-
-  // @media (max-width: 320px) {
-  //   width: 19px;
-  // }
-    }
   }
 
 }
@@ -75,6 +58,23 @@ footer {
 
 .btn {
   border-radius: 0 !important;
+}
+
+// Typ-Writer-Effect
+.react-rotating-text-cursor {
+  animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+}
+
+@keyframes blinking-cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 

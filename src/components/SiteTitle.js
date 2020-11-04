@@ -1,39 +1,64 @@
 import React from 'react';
+import styled, { keyframes } from 'styled-components';
 
 export const SiteTitle = () => {
-	const myFirstName = 'stefan';
-	const myLastName = 'ihle';
-	// const myName = ['s', 't', 'e', 'f', 'a', 'n', 'i', 'h', 'l', 'e'];
-	const myName =
-		myFirstName.charAt(0).toUpperCase() +
-		myFirstName.substring(1) +
-		' ' +
-		myLastName.charAt(0).toUpperCase() +
-		myLastName.substring(1);
+	const createName = (firstName, lastName) => {
+		const myName =
+			firstName.charAt(0).toUpperCase() +
+			firstName.substring(1) +
+			' ' +
+			lastName.charAt(0).toUpperCase() +
+			lastName.substring(1);
 
-	return (
-		<h1>
-			{myName.split('').map((name, i) => {
-				const random = Math.floor(Math.random() * 45);
-				
-				const randomStyle = {
-					transform: `rotate(${random}deg)`
-				}
-								
-				return name === ' ' ? ' ' : <span key={i} style={randomStyle}>{ name}</span>;
-			})}
-			
-		
-			{/* <span>S</span>
-			<span>t</span>
-			<span>e</span>
-			<span>f</span>
-			<span>a</span>
-			<span>n</span>
-			<span>I</span>
-			<span>h</span>
-			<span>l</span>
-			<span>e</span> */}
-		</h1>
-	);
+		return createArrayFromName(myName);
+	};
+
+	const createArrayFromName = nameArr => {
+		const arrayName = nameArr.split('').map((name, i) => {
+			const random = Math.floor(Math.random() * 90);
+
+			const RandomRotateAnimation = keyframes`
+					from {
+						transform: rotate(0deg);
+						background-color: #1C2C30;
+						color: #F3F3F3;
+					}
+
+					to {
+						transform: rotate(${random}deg);
+						background-color: #F3F3F3;
+						color: #1C2C30;
+					}
+			`;
+
+			const RotateStyledSpan = styled.span`
+			  border: 3px solid #F3F3F3;
+				color: #F3F3F3;
+				padding: 5px;
+				margin-right: 18px;
+				box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+				display: inline-block;
+				width: clamp(19px, 4.5vw, 44px);
+				text-align: center;
+				border-radius: 5px;
+				font-size: clamp(1rem, 2.5vw, 40px);
+				animation: ${RandomRotateAnimation} 4s ease-in-out 0.5s infinite alternate
+					forwards;
+			`;
+
+			if (name === ' ') {
+				return ' ';
+			}
+
+			return (
+				<RotateStyledSpan key={i} className='normal'>
+					{name}
+				</RotateStyledSpan>
+			);
+		});
+
+		return arrayName;
+	};
+
+	return <h1>{createName('stefan', 'ihle')}</h1>;
 };

@@ -37,9 +37,16 @@ module.exports = {
 				imagePath: 'url'
 			}
 		},
+		{
+			resolve: 'gatsby-plugin-html-attributes',
+			options: {
+				lang: 'en'
+			}
+		},
 		`gatsby-plugin-sass`,
 		`gatsby-plugin-sharp`,
 		`gatsby-transformer-sharp`,
-		`gatsby-plugin-react-helmet`
+		`gatsby-plugin-react-helmet`,
+		`gatsby-plugin-styled-components`
 	]
 };

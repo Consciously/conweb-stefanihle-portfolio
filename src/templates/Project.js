@@ -5,13 +5,15 @@ import { Button, Card, Col, Row } from 'react-bootstrap';
 
 export default function SingleProjectPage({ data: { projectItem } }) {
 	return (
-		<main className='container'>
+		<main className='container py-5'>
 			<Row>
 				<Col>
 					<Card>
-						<Card.Body>
-							<Card.Title>{projectItem.project}</Card.Title>
-							<Card.Text>{projectItem.description}</Card.Text>
+						<Card.Body className="bg-primary text-light">
+							<Card.Title className="text-center">
+								<h2>{projectItem.project}</h2>
+							</Card.Title>
+							<Card.Text className="text-center">{projectItem.description}</Card.Text>
 						</Card.Body>
 						<Img fluid={projectItem.image.asset.fluid} />
 						<Button variant='primary' href={projectItem.githubUrl}>

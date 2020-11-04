@@ -6,9 +6,9 @@ export default function ProjectPage({ data }) {
 	const projects = data.projects.nodes;
 
 	return (
-		<main className='container'>
+		<main className='container py-5'>
 			<Row className='flex-column justify-content-center'>
-				<h2 className='text-center'>Projects</h2>
+				<h2 className='text-center mb-5'>Projects</h2>
 
 				<ProjectList projects={projects} />
 			</Row>
