@@ -37,7 +37,9 @@
 		"react-dom": "^16.12.0",
 		"react-helmet": "^6.1.0",
 		"react-rotating-text": "^1.4.1",
-		"styled-components": "^5.2.1"
+		"styled-components": "^5.2.1",
+		"typeface-montserrat": "^1.1.13",
+		"typeface-open-sans": "^1.1.13"
 	},
 	"devDependencies": {
 		"cross-env": "^7.0.2",
