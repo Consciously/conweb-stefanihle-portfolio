@@ -8,7 +8,9 @@ module.exports = {
 	siteMetadata: {
 		title: `conweb - stefan ihle`,
 		description: `website for creating web solution and provide web services`,
-		author: `stefan ihle`
+		author: `stefan ihle`,
+		url: `https://conweb.digital`,
+		twitterUsername: '@Consciously79'
 	},
 
 	plugins: [
