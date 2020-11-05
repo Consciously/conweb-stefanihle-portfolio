@@ -2,30 +2,36 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { Button, Card, Col, Row } from 'react-bootstrap';
+import SEO from '../components/SEO';
 
 export default function SingleProjectPage({ data: { projectItem } }) {
 	return (
-		<main className='container py-5'>
-			<Row>
-				<Col>
-					<Card>
-						<Card.Body className="bg-primary text-light">
-							<Card.Title className="text-center">
-								<h2>{projectItem.project}</h2>
-							</Card.Title>
-							<Card.Text className="text-center">{projectItem.description}</Card.Text>
-						</Card.Body>
-						<Img fluid={projectItem.image.asset.fluid} />
-						<Button variant='primary' href={projectItem.githubUrl}>
-							Github
-						</Button>
-						<Button variant='secondary' href={projectItem.liveUrl}>
-							Live Demo
-						</Button>
-					</Card>
-				</Col>
-			</Row>
-		</main>
+		<>
+			<SEO title={projectItem.project} image={projectItem.image?.asset?.fluid?.src} />
+			<main className='container py-5'>
+				<Row>
+					<Col>
+						<Card>
+							<Card.Body className='bg-primary text-light'>
+								<Card.Title className='text-center'>
+									<h2>{projectItem.project}</h2>
+								</Card.Title>
+								<Card.Text className='text-center'>
+									{projectItem.description}
+								</Card.Text>
+							</Card.Body>
+							<Img fluid={projectItem.image.asset.fluid} />
+							<Button variant='primary' href={projectItem.githubUrl}>
+								Github
+							</Button>
+							<Button variant='secondary' href={projectItem.liveUrl}>
+								Live Demo
+							</Button>
+						</Card>
+					</Col>
+				</Row>
+			</main>
+		</>
 	);
 }
 

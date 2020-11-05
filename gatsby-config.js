@@ -5,7 +5,12 @@ const dotenv = require('dotenv');
 dotenv.config({ path: '.env' });
 
 module.exports = {
-	/* Your site config here */
+	siteMetadata: {
+		title: `conweb - stefan ihle`,
+		description: `website for creating web solution and provide web services`,
+		author: `stefan ihle`
+	},
+
 	plugins: [
 		{
 			resolve: `gatsby-source-filesystem`,

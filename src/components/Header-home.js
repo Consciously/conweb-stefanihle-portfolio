@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import ReactRotatingText from 'react-rotating-text';
 
-import { Button, Container, Row, Navbar, Nav } from 'react-bootstrap';
+import { Container, Row, Navbar, Nav } from 'react-bootstrap';
 import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 
